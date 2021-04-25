@@ -1,20 +1,8 @@
-.cntFather{
+.main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-        .cntHeader{
-            width: 100%;
-            height: 8em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 0.5px solid black;
-            background-color: #5c573e;
-        
-        }
 
         .cntMain{
             width: 100%;
