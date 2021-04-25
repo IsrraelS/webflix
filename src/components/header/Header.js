@@ -34,27 +34,3 @@ export function Header(){
     )
 }
 
-/*
-Login
-
-correo
-password
-
-Boton de entrar
-
-boton No estas registrado
-
-Registrar
-
-nombre
-apellido
-correo
-edad
-password
-
-boton Registrar
-
-segunda imagen con hideen cion sinopsis
-
-
-*/
