@@ -8,9 +8,16 @@ export function Footer(){
         <div className="footer"> 
             <div className="cntFooter">
                 <div className="boxFooter">
-                    <div>
-                        <p>Footer</p>  
+                <div className="cntFooter">
+                    <div className="boxIcons">
+                        <div className="icon1"><a href="" ><i class="fab fa-twitter fa-2x"></i></a></div>
+                        <div className="icon1"><a href="" ><i class="fab fa-instagram fa-2x"></i></a></div>
+                        <div className="icon1"><a href="" ><i class="fab fa-facebook fa-2x"></i></a></div>
                     </div>
+                    <div className="boxDR">
+                        <p className="reserved">Developed by Gabriel & Israel</p>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>    

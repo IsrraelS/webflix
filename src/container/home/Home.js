@@ -7,10 +7,9 @@ export function Home(){
         <div className="main"> 
             <div className="cntMain">
                 <div className="boxMain">
-                    <div className ="main">
-                        <p>Main</p> 
-                        <div className="article"></div>
-                        <div className="aside"></div>
+                    <div className ="centralMain">
+                        <div className="central">Aqui va un carrusel</div>
+                        <div className="mainFooter">Aqui va una fila de estrenos</div>
                     </div>
                 </div>  
             </div>
