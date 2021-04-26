@@ -1,0 +1,65 @@
+.fatherRegister{
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #506c64;
+
+        @media (min-width:768px){
+
+        }
+
+        @media (min-width:1024px){
+            
+        }
+    
+        .cntRegister{
+            width: 19em;
+            height: 25em;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+                .headerRgtr{
+                    height: 2em;
+                    width: 19em;
+
+                        @media (min-width:768px){
+
+                        }
+                
+                        @media (min-width:1024px){
+                            
+                        }
+                }
+
+                .mainRgtr{
+                    height: 18em;
+                    width: 11em;
+
+                        @media (min-width:768px){
+
+                        }
+                
+                        @media (min-width:1024px){
+                            
+                        }
+                }
+
+                .footerRgtr{
+                    height: 4em;
+                    width: 19em;
+
+                        @media (min-width:768px){
+
+                        }
+                
+                        @media (min-width:1024px){
+                            
+                        }
+                }
+        }
+}
