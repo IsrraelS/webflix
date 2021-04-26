@@ -6,32 +6,55 @@
 
         .cntHeader{
             width: 100%;
-            height: 8em;
-            border: 0.5px solid black;
-            background-color: #5c573e;
+            //height: 2em;
+            //border: 0.5px solid black;
 
                 .boxHeader{
-                    width: 99.6%;
-                    height: 7.6em;
+                    width: 100%;
+                    //height: 2em;
                     display: flex;
                     flex-direction: column;
                     //padding: 5px 5px;
-                    border: 3px solid #c4f7a1;
-
-                        .cntLogo {
-                            width: 100%;
-                            height: 4.7em;
-                            border:0.5px solid #c8d96f;
-                            display:flex;
-                            align-items: center;
-                            justify-content: center;
-        
-                        }
 
                         .cntNavbar{
                             //width: 100%;
                             //height: 2.6em;
-                            border: 0.5px solid #c8d96f;
+                            //border: 0.5px solid #c8d96f;
+                        
+                                .navbar{
+                                    background-color: #011638 !important;
+                                    height: 4em;
+                                    color:white;
+
+                                        .container-fluid{
+                                            background-color: #011638 !important;
+                                            text-align: center;
+                                        }
+                                
+                                        .navbar-toggler{
+                                            color: white !important;
+                                            border-color: 2px solid #214e34 !important;
+                                            background-color: #364156;
+                                            
+                                        }
+
+                                        .boxIcon{
+                                            width: 2em;
+                                            height: 1.5em;
+                                            background-color: #011638 !important;
+                                            margin-left: 2em;
+
+                                                .iconWTF{
+                                                    width: 2em;
+                                                    height: 1.5em;
+                                                }
+                                        }
+
+                                        .nav-link{
+                                            color: white;
+                                        }
+                                }
+
                         }
                 }
 

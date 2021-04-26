@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Header.scss'
+import iconWTFRR from "../../iconWTFRR.png"
+
 
 export function Header(){
 
@@ -7,23 +10,39 @@ export function Header(){
         <div className="header">
             <div className="cntHeader">
                 <div className="boxHeader">
-                    <div className="cntLogo">
-                        <p>Header</p>
-                    </div>
                     <div className="cntNavbar">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <div class="container-fluid">
-                                <a class="navbar-brand" href="#">Navbar</a>
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                                <Link class="navbar-brand" to="./">
+                                    <div className="boxIcon">
+                                        <img className="iconWTF" src={ iconWTFRR }></img>
+                                    </div>
+                                </Link>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
-                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                <div class="navbar-nav">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                    <a class="nav-link" href="#">Features</a>
-                                    <a class="nav-link" href="#">Pricing</a>
-                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                </div>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+                                        </li>
+                                        <li class="nav-item">
+                                            <Link class="nav-link" to="#">Register</Link>
+                                        </li>
+                                        <li class="nav-item">
+                                            <Link class="nav-link" to="#">Login</Link>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Search
+                                            </Link>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><Link class="dropdown-item" to="#">Title</Link></li>
+                                                <li><Link class="dropdown-item" to="#">Generes</Link></li>
+                                                <li><Link class="dropdown-item" to="#">Actors</Link></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </nav>
