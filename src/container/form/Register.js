@@ -1,9 +1,18 @@
-import React from "react"
-import './Register.scss'
+import React from "react";
+import ApiConsumer from "../../util/ApiConsumer";
+import './Register.scss';
+
+
 
 export function Register(){
 
+    const crearUsuario = (e) => {
+        e.preventDefault();
+        console.log(e.target);
+    }
+    //ApiConsumer.register
     return(
+        <form>
         <div className="fatherRegister">
             <div className="cntRegister">
                 <div className="headerRgtr">
@@ -33,10 +42,11 @@ export function Register(){
                 </div>
                 <div className="footerRgtr">
                     <div className="cntBtnRG">
-                        <button className="btnRgtr" onInput={(e) => function(){}}>Register</button>
+                        <button className="btnRgtr" onClick={(e) => crearUsuario(e)}>Register</button>
                     </div>
                 </div>
             </div>
         </div>
+        </form>
     )
 }
