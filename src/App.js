@@ -4,6 +4,7 @@ import { Home } from './container/home/Home';
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
 import { Register } from './container/form/Register';
+import { Login } from './container/form/Login';
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
 
       <Route path="/register">
         <Register></Register>
+      </Route>
+
+      <Route path="/login">
+        <Login></Login>
       </Route>
 
     </Switch>
