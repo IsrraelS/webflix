@@ -9,8 +9,13 @@ const ApiConsumer = {
     //Cookies.set('name', 'value')
     login : async (email, password) => {
         try {
-            let response = await fetch('http://127.0.0.1:5000/users', 
-            { method: 'POST', body: { email: email, password: password }});
+            let response = await fetch('http://127.0.0.1:5000/login', 
+            { method: 'POST', 
+                body: JSON.stringify({ 
+                    email: email, 
+                    password: password }),
+                headers:{'Content-Type': 'application/json'}
+            });
             response = await response.json();
             return response;
         } catch (error) {
@@ -19,15 +24,17 @@ const ApiConsumer = {
     },
     register : async (name, lastname, email, age, password) => {
         try {
-            let response = await fetch('http://127.0.0.1:5000/users', 
+            let response = await fetch('http://127.0.0.1:5000/singup', 
             { method: 'POST', 
-            body: { 
+            body: JSON.stringify({ 
                 name: name,
                 lastname: lastname,
                 email: email, 
                 age: age,
                 admin: false,
-                password: password }});
+                password: password }),
+                headers:{'Content-Type': 'application/json'}
+            });
             response = await response.json();
             return response;
         } catch (error) {

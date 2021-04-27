@@ -11,35 +11,35 @@ export function Header(){
             <div className="cntHeader">
                 <div className="boxHeader">
                     <div className="cntNavbar">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <div class="container-fluid">
-                                <Link class="navbar-brand" to="./">
+                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                            <div className="container-fluid">
+                                <Link className="navbar-brand" to="./">
                                     <div className="boxIcon">
                                         <img className="iconWTF" src={ iconWTFRR }></img>
                                     </div>
                                 </Link>
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
+                                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
                                 </button>
-                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+                                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul className="navbar-nav">
+                                        <li className="nav-item">
+                                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                                         </li>
-                                        <li class="nav-item">
-                                            <Link class="nav-link" to="/register">Register</Link>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/register">Register</Link>
                                         </li>
-                                        <li class="nav-item">
-                                            <Link class="nav-link" to="#">Login</Link>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/login">Login</Link>
                                         </li>
-                                        <li class="nav-item dropdown">
-                                            <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <li className="nav-item dropdown">
+                                            <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Search
                                             </Link>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <li><Link class="dropdown-item" to="#">Title</Link></li>
-                                                <li><Link class="dropdown-item" to="#">Generes</Link></li>
-                                                <li><Link class="dropdown-item" to="#">Actors</Link></li>
+                                            <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><Link className="dropdown-item" to="#">Title</Link></li>
+                                                <li><Link className="dropdown-item" to="#">Generes</Link></li>
+                                                <li><Link className="dropdown-item" to="#">Actors</Link></li>
                                             </ul>
                                         </li>
                                     </ul>
