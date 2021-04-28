@@ -14,12 +14,12 @@
             background-color: #364156;
 
                 @media(min-width:768px){
-                    height: 40em;
+                    height: 45em;
 
                 }
 
                 @media(min-width:1024px){
-                    height: 50em;
+                    height: 60em;
 
                 }
 
@@ -33,18 +33,18 @@
                     @media (min-width: 768px){
                         display: flex;
                         flex-direction: column;
-                        height: 37em;
+                        height: 40em;
                     }
 
                     @media (min-width: 1024px){
                         display: flex;
                         flex-direction: column;
-                        height: 48em;
+                        height: 55em;
                     }
                 
-                        .central{
+                        .carouselHome{
                             width: 19em;
-                            height: 15em;
+                            height: 11.8em;
                             border: 1 solid black;
                             border-radius: 2px;
                             background-color: #cdcdcd;
@@ -52,12 +52,12 @@
                         
                                 @media(min-width: 768px){
                                     width: 45em;
-                                    height: 25em;
+                                    height: 28.1em;
                                 }
 
                                 @media(min-width: 1024px){
                                     width: 55em;
-                                    height: 30em;
+                                    height: 34.3em;
                                 }
                         
                         }
