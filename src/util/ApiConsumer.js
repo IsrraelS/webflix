@@ -1,15 +1,11 @@
-import Cookies from 'js-cookie';
-
 const urlLocal = `http://127.0.0.1:5000`;
 
 //Object used to connect to local API and to fetch information
 const ApiConsumer = {
-
-    //sends email and password to API and saves token in a cookie
-    //Cookies.set('name', 'value')
+    
     login : async (email, password) => {
         try {
-            let response = await fetch('http://127.0.0.1:5000/login', 
+            let response = await fetch(`${urlLocal}/login`, 
             { method: 'POST', 
                 body: JSON.stringify({ 
                     email: email, 
@@ -24,7 +20,7 @@ const ApiConsumer = {
     },
     register : async (name, lastname, email, age, password) => {
         try {
-            let response = await fetch('http://127.0.0.1:5000/singup', 
+            let response = await fetch(`${urlLocal}/singup`, 
             { method: 'POST', 
             body: JSON.stringify({ 
                 name: name,
@@ -34,6 +30,20 @@ const ApiConsumer = {
                 admin: false,
                 password: password }),
                 headers:{'Content-Type': 'application/json'}
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    getUser : async (token) => {
+        try {
+            let response = await fetch(`${urlLocal}/users`, 
+            { method: 'GET',             
+                headers:{
+                    'token': token
+                }
             });
             response = await response.json();
             return response;

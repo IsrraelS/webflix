@@ -1,26 +1,25 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.scss';
 import ApiConsumer from "../../util/ApiConsumer";
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import { useHistory } from "react-router";
-import Cookies from 'js-cookie';
+import { useDispatch, useSelector } from 'react-redux';
+import {loginAction} from '../../store/actions/loginActions';
+import apiLogin from '../../store/services/apiLogin';
 
 export function Login(){        
-
+    const dispatch = useDispatch();
     const history = useHistory();
+
     let [email, setEmail] = useState("");
-    let [password, setPassword] = useState("");
+    let [password, setPassword] = useState("");    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let respuesta = await ApiConsumer.login(email, password);
-        if(respuesta.error){
-            console.log(respuesta);
-            return;
-        }
-        Cookies.set('token', respuesta.token);
-        const token = Cookies.get('token'); 
+        dispatch(apiLogin(email, password));        
+    }
+    const token = useSelector(state => state.token)
+    if (token) {
         history.push('/');
     }
 
