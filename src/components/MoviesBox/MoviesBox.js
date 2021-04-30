@@ -1,26 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ApiConsumer from "../../util/ApiConsumer";
+import './MoviesBox.scss';
 
-const MoviesBox = (pros) => {
-    //tengo que hacer un fetch de peliculas por genero y mapear el resultado en el return
-    //el genero tiene que ser elegido en un componente externo que a travez de un middleware 
-    //modifique un campo de movies por genero que sea un state del store y este componente 
-    //solo tenga que subscribirse a el
+const MoviesBox = (props) => {
     let [movies, setMovies] = useState([]);
     const token = useSelector(state => state.token.jwt);
     console.log(token);
-    const genre = "Horror"
+    const genre = props.genre;
+    const actor = props.actor;
+    const title = props.title;
+    let apiFunction;
+    let parametro;
+    if(genre){
+        apiFunction = ApiConsumer.getMoviesByGenre;
+        parametro = genre;
+    }    
+    if(actor){
+        apiFunction = ApiConsumer.getMoviesByActor;
+        parametro = actor;
+    } 
+    if(title){
+        apiFunction = ApiConsumer.getMoviesByTitle;
+        parametro = title;
+    }
     useEffect(async () => {
-        let result= await ApiConsumer.getMoviesByGenre(token,genre);
+        let result= await apiFunction(token, parametro);
+        setMovies(result);
         console.log(result);
     }, [])
+    
         
     return(       
         <>
             {movies.map((movie, index ) => {
                 return (
-                    <div>
+                    <div key={index} className="movie-box">
+                        <div>{movie.title}</div>
+                        <img className="image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} />
                     </div>  
                 )}
             )}  

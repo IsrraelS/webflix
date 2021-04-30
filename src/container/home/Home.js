@@ -37,7 +37,9 @@ export function Home(){
                             </div>
                         </div>
                         <div className="mainFooter">Aqui va una fila de estrenos</div>
-                        <MoviesBox></MoviesBox>
+                        <MoviesBox title="the"/>
+                        <MoviesBox genre="Horror"/>
+                        <MoviesBox actor="Will"/>
                     </div>
                 </div>  
             </div>

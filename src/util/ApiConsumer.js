@@ -66,6 +66,36 @@ const ApiConsumer = {
             console.log(error);
         }
     },
+    getMoviesByActor : async (token, actors) => {
+        try {
+            let response = await fetch(`${urlLocal}/movies/actors`, 
+            { method: 'GET',             
+                headers:{
+                    'token': token,
+                    'actors': actors
+                }
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    getMoviesByTitle : async (token, title) => {
+        try {
+            let response = await fetch(`${urlLocal}/movies/title`, 
+            { method: 'GET',             
+                headers:{
+                    'token': token,
+                    'title': title
+                }
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }
 
 export default ApiConsumer
