@@ -19,13 +19,13 @@ export function Home(){
                         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                <img src={ LordOfRings1 } className="d-block w-100" alt="..."/>
+                                  <img src={ LordOfRings1 } className="d-block w-100" alt="..."/>
                                 </div>
-                                <div class="carousel-item">
-                                <img src={ LordOfRings2 } className="d-block w-100" alt="..."/>
+                                <div className="carousel-item">
+                                  <img src={ LordOfRings2 } className="d-block w-100" alt="..."/>
                                 </div>
-                                <div class="carousel-item">
-                                <img src={ LordOfRings3 } className="d-block w-100" alt="..."/>
+                                <div className="carousel-item">
+                                  <img src={ LordOfRings3 } className="d-block w-100" alt="..."/>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -42,7 +42,7 @@ export function Home(){
                             <div className="overflow-auto cntMF">
                                 <div className="boxMF">
                                     <div className="cntPoster">
-                                    <img src={ theGodfather } className="imgMF"></img>
+                                      <img src={ theGodfather } className="imgMF"></img>
                                     </div>
                                     <div className="cntTxt">
 
@@ -50,7 +50,7 @@ export function Home(){
                                 </div>
                                 <div className="boxMF">
                                     <div className="cntPoster">
-                                        <img src={ theGodfather2 } className="imgMF"></img>
+                                       <img src={ theGodfather2 } className="imgMF"></img>
                                     </div>
                                     <div className="cntTxt">
 
@@ -58,7 +58,7 @@ export function Home(){
                                 </div>
                                 <div className="boxMF">
                                     <div className="cntPoster">
-                                        <img src={ theGodfather } className="imgMF"></img>
+                                       <img src={ theGodfather } className="imgMF"></img>
                                     </div>
                                     <div className="cntTxt">
 
@@ -66,7 +66,7 @@ export function Home(){
                                 </div>
                                 <div className="boxMF">
                                     <div className="cntPoster">
-                                        <img src={ theGodfather2 } className="imgMF"></img>
+                                       <img src={ theGodfather2 } className="imgMF"></img>
                                     </div>
                                     <div className="cntTxt">
                                         
@@ -74,7 +74,7 @@ export function Home(){
                                 </div>
                                 <div className="boxMF">
                                     <div className="cntPoster">
-                                        <img src={ theGodfather } className="imgMF"></img>
+                                       <img src={ theGodfather } className="imgMF"></img>
                                     </div>
                                     <div className="cntTxt">
 
@@ -82,7 +82,7 @@ export function Home(){
                                 </div>
                                 <div className="boxMF">
                                     <div className="cntPoster">
-                                        <img src={ theGodfather2 } className="imgMF"></img>
+                                       <img src={ theGodfather2 } className="imgMF"></img>
                                     </div>
                                     <div className="cntTxt">
 
@@ -90,7 +90,7 @@ export function Home(){
                                 </div>
                                 <div className="boxMF">
                                     <div className="cntPoster">
-                                        <img src={ theGodfather } className="imgMF"></img>
+                                       <img src={ theGodfather } className="imgMF"></img>
                                     </div>
                                     <div className="cntTxt">
 
