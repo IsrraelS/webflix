@@ -51,6 +51,21 @@ const ApiConsumer = {
             console.log(error);
         }
     },
+    getMoviesByGenre : async (token, genre) => {
+        try {
+            let response = await fetch(`${urlLocal}/movies/genre`, 
+            { method: 'GET',             
+                headers:{
+                    'token': token,
+                    'genre': genre
+                }
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }
 
 export default ApiConsumer

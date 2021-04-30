@@ -1,9 +1,15 @@
-const loginReducer = (token = "", action) => {
+const loginReducer = (token = {}, action) => {
     switch (action.type) {
         case 'GET_TOKEN':    
-            return action.token 
+            return {
+                jwt: action.token,
+                error: false
+            }
         case 'LOGIN_ERROR':    
-            return token 
+            return {
+                jwt: "",
+                error: true
+            }
         default:
             return token
     }

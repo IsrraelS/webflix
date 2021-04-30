@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import LordOfRings1 from "../home/img/LordOfRings1.jpeg"
 import LordOfRings2 from "../home/img/LordOfRings2.jpeg"
 import LordOfRings3 from "../home/img/LordOfRings3.jpeg"
+import MoviesBox from '../../components/MoviesBox/MoviesBox.js';
 
 export function Home(){
 
@@ -36,6 +37,7 @@ export function Home(){
                             </div>
                         </div>
                         <div className="mainFooter">Aqui va una fila de estrenos</div>
+                        <MoviesBox></MoviesBox>
                     </div>
                 </div>  
             </div>
