@@ -18,13 +18,18 @@ export function Login(){
         e.preventDefault();
         dispatch(apiLogin(email, password));        
     }
-    const token = useSelector(state => state.token)
+    const token = useSelector(state => state.token.jwt)
+    const errorLogin = useSelector(state => state.token.error)
+
     if (token) {
         history.push('/');
     }
 
     return(
         <form onSubmit={handleSubmit}>
+            {errorLogin == true && 
+                <h2>ERROR en las credenciales</h2>
+            }   
             <div className="fatherLogin">
                 <div className="cntLogin">
                     <div className= "headerLgn">
