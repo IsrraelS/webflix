@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import LordOfRings1 from "../home/img/LordOfRings1.jpeg"
 import LordOfRings2 from "../home/img/LordOfRings2.jpeg"
 import LordOfRings3 from "../home/img/LordOfRings3.jpeg"
-import MoviesBox from '../../components/MoviesBox/MoviesBox.js';
-import MovieDetail from '../../components/MovieDetail/MovieDetail.js';
 
 export function Home(){
 
