@@ -41,7 +41,6 @@ export function Home(){
                             </RBCarousel>
                         </div>
                         <div className="mainFooter">Aqui va una fila de estrenos</div>
-
                     </div>
                 </div>  
             </div>
