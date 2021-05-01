@@ -5,6 +5,7 @@ import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
 import { Register } from './container/form/Register';
 import { Login } from './container/form/Login';
+import MovieDetail from './components/MovieDetail/MovieDetail';
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
 
             <Route path="/login">
               <Login></Login>
+            </Route>
+
+            <Route path="/movieDetail">
+              <MovieDetail></MovieDetail>
             </Route>
 
           </Switch>
