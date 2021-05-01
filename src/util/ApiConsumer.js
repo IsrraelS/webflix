@@ -96,6 +96,35 @@ const ApiConsumer = {
             console.log(error);
         }
     },
+    getMoviesByDirector : async (token, director) => {
+        try {
+            let response = await fetch(`${urlLocal}/movies/director`, 
+            { method: 'GET',             
+                headers:{
+                    'token': token,
+                    'director': director
+                }
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    getMoviesById : async (id) => {
+        try {
+            let response = await fetch(`${urlLocal}/movies/id`, 
+            { method: 'GET',             
+                headers:{
+                    'id': id
+                }
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }
 
 export default ApiConsumer

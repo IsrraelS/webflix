@@ -10,6 +10,7 @@ const MoviesBox = (props) => {
     const genre = props.genre;
     const actor = props.actor;
     const title = props.title;
+    const director = props.director;
     let apiFunction;
     let parametro;
     if(genre){
@@ -23,6 +24,10 @@ const MoviesBox = (props) => {
     if(title){
         apiFunction = ApiConsumer.getMoviesByTitle;
         parametro = title;
+    }
+    if(director){
+        apiFunction = ApiConsumer.getMoviesByDirector;
+        parametro = director;
     }
     useEffect(async () => {
         let result= await apiFunction(token, parametro);
