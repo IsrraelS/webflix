@@ -8,28 +8,27 @@ import { Login } from './container/form/Login';
 
 function App() {
   return (
-<div className="app">
-    <BrowserRouter>
-      <Header></Header>
-    <Switch>
+      <div className="app">
+          <BrowserRouter>
+            <Header></Header>
+          <Switch>
 
-      <Route path="/" exact>
-        <Home></Home>
-      </Route>
+            <Route path="/" exact>
+              <Home></Home>
+            </Route>
 
-      <Route path="/register">
-        <Register></Register>
-      </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
 
-      <Route path="/login">
-        <Login></Login>
-      </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
 
-    </Switch>
-      <Footer></Footer>
-    </BrowserRouter>
-</div>
-
+          </Switch>
+            <Footer></Footer>
+          </BrowserRouter>
+      </div>
   );
 }
 
