@@ -17,7 +17,7 @@ export function Home(){
                             <Carousel></Carousel>
                         </div>
                         <div className="mainFooter">
-                            <OverFlowRow></OverFlowRow>
+                            <OverFlowRow></OverFlowRow>                     
                         </div>
                     </div>
                 </div>  
