@@ -1,34 +1,55 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './Login.scss'
+import { Link } from 'react-router-dom';
+import './Login.scss';
+import ApiConsumer from "../../util/ApiConsumer";
+import React,{ useState } from 'react';
+import { useHistory } from "react-router";
+import { useDispatch, useSelector } from 'react-redux';
+import {loginAction} from '../../store/actions/loginActions';
+import apiLogin from '../../store/services/apiLogin';
 
-export function Login(){
+export function Login(){        
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");    
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        dispatch(apiLogin(email, password));        
+    }
+    const token = useSelector(state => state.token)
+    if (token) {
+        history.push('/');
+    }
 
     return(
-        <div className="fatherLogin">
-            <div className="cntLogin">
-                <div className= "headerLgn">
-                    <p>Register</p>
-                </div>
-                <div className="mainLgn">
-                    <div className="cntDates">
-                        <label className="emailLgn">E-mail:</label>
-                        <input className="iptEmL" type="email" placeholder="E-mail" onInput={(e) => function(){}}></input>
+        <form onSubmit={handleSubmit}>
+            <div className="fatherLogin">
+                <div className="cntLogin">
+                    <div className= "headerLgn">
+                        <p>Register</p>
                     </div>
-                    <div className="cntDates">
-                        <label className="passwordLgn">Password:</label>
-                        <input className="iptPwL" type="password" placeholder="Password" onInput={(e) => function(){}}></input>
+                    <div className="mainLgn">
+                        <div className="cntDates">
+                            <label className="emailLgn">E-mail:</label>
+                            <input className="iptEmL" type="email" placeholder="E-mail" onChange={e => setEmail(e.target.value)}></input>
+                        </div>
+                        <div className="cntDates">
+                            <label className="passwordLgn">Password:</label>
+                            <input className="iptPwL" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)}></input>
+                        </div>
                     </div>
-                </div>
-                <div className="footerLgn">
-                    <div className="btnIn">
-                        <button>Sing In</button>
-                    </div>
-                    <div className="txtRgtr">
-                        <p>No estas aun registrado? Pulsa <Link className="redirecRgtr">Aqui</Link></p>
+                    <div className="footerLgn">
+                        <div className="btnIn">
+                            <button type='submit'>Sing In</button>
+                        </div>
+                        <div className="txtRgtr">
+                            <p>No estas aun registrado? Pulsa <Link className="redirecRgtr" to="/register">Aqui</Link></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     )
 }

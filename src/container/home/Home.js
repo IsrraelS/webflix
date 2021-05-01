@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import iconWTF3 from '../../iconWTF3.png'
 import iconWTF7 from '../../iconWTF7.png'
 
+
 export function Home(){
 
     const [nowPlaying, setNowPlaying] = useState([]);
@@ -40,6 +41,7 @@ export function Home(){
                             </RBCarousel>
                         </div>
                         <div className="mainFooter">Aqui va una fila de estrenos</div>
+
                     </div>
                 </div>  
             </div>
