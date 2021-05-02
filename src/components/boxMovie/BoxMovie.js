@@ -2,15 +2,12 @@ import React from "react";
 import './BoxMovie.scss'
 import theGodfather from './img/theGodfather.jpeg'
 
-function BoxMovie(){
+function BoxMovie(props){
 
     return(
         <div className="boxMF">
             <div className="cntPoster">
-                <img src={ theGodfather } className="imgMF"></img>
-            </div>
-            <div className="cntTxt">
-
+                <img src={ props.ruta } className="imgMF" alt=""></img>
             </div>
         </div>
     )

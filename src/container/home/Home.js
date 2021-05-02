@@ -7,21 +7,23 @@ import OverFlowRow from '../../components/overFlowRow/OverFlowRow.js'
 export function Home(){
 
     return(
-            <div className="main">
-                <div className="cntMain">
-                    <div className="boxMain">
-                        <div className ="centralMain">
-                            <div className="carouselHome">
-                                <Carousel></Carousel>
-                            </div>
-                            <div className="mainFooter">
-                                <OverFlowRow></OverFlowRow>
-                            </div>
+        <div className="main">
+            <div className="cntMain">
+                <div className="boxMain">
+                    <div className ="centralMain">
+                        <div className="carouselHome">
+                            <Carousel></Carousel>
+                        </div>
+                        <div className="mainFooter">
+                            <OverFlowRow genre="Action"/>
+                        </div>
+                        <div className="mainFooter">
+                            <OverFlowRow genre="Comedy"/>
                         </div>
                     </div>
                 </div>
             </div>
-
+        </div>
     )
  
 }    
