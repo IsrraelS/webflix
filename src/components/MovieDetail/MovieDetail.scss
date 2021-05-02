@@ -6,13 +6,95 @@
   margin-top: 5em;
   margin-bottom: 1em;
 
-    .cntImgMD{
+    .boxMD{
+      width: 19em;
+      height: 47.2em;
       border: 1px solid black;
-      margin-bottom: 1em;
-    
-        .imgMD{
-          height: 10em;
-        }
-    }
+      display: flex;
+      flex-direction: column;
 
+
+          .headerMD{
+            height: 10em;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+              .cntImgMD{
+                display: flex;
+
+              
+                  .imgMD{
+                    height: 10em;
+                    width: 100%;
+                  }
+              }
+          }
+          
+          .mainMD{
+            height: 30em;
+
+              .sinopsis{
+                margin: 0;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                background: aqua;             
+                text-align: center;
+              }
+              
+              .boxTxtM{
+                text-align: justify;
+                padding: 5px;
+                height: 30em;
+
+                .ttlTxt{
+                  margin: 0;
+                  padding-top: 1em;
+                  padding-bottom: 1em;
+                  background: aqua;             
+                  text-align: center;
+                }
+              
+                  .txtActors{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                  }
+                  
+                  .txtGeneres{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    
+                  
+                  }
+              
+              }
+
+          }
+
+          .footerMD{
+            height: 7em;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: cornflowerblue;
+
+              .cntTrailer{
+                  height: 2em;
+              }
+              
+              .cntPrice{
+                height: 2em;
+              }
+
+              .cntDirector{
+                height: 2em;
+              }
+              
+          } 
+    }
 }

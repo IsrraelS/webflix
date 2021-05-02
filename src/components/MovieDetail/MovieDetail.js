@@ -31,26 +31,47 @@ const MovieDetail = (props) => {
 
     return (
         <div className="cntMovieDetail">
-            <div className="cntImgMD">
-                <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt="fondo" className="imgMD"/>
+            <div className="boxMD">
+                <div className="headerMD">
+                    <div className="cntImgMD" >
+                        <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt="fondo" className="imgMD"/>
+                    </div>
+                </div>
+                <div className="mainMD">
+                    <div className="boxTxtM">  
+                        <p className="sinopsis">Sinopsis</p>  
+                        <div>{movie.overview}</div>
+                        <div>{movie.tagline}</div>
+                        <p className="ttlTxt">Actors:</p>
+                        {movie.cast.map((actor, index) => {
+                            return(
+                                <div className="txtActors">
+                                    <span key={index}>{actor}</span>
+                                </div>
+                            )
+                        })}
+                        <p className="ttlTxt">Generes:</p>
+                        {movie.genres.map((genre, index) => {
+                            return(
+                                <div className="txtGeneres">
+                                    <span key={index}>{genre}</span>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+                <div className="footerMD">    
+                    <div className="cntTrailer">
+                        <a href={`https://www.youtube.com/watch?v=${movie.video}`} target="_blank" rel="noreferrer">trailer</a>            
+                    </div>
+                    <div className="cntPrice">
+                        <div>Price:{movie.price}</div>
+                    </div>
+                    <div className ="cntDirector">
+                        <div>Director:{movie.director}</div>
+                    </div>
+                </div>
             </div>
-            <div>{movie.overview}</div>
-            <div>{movie.tagline}</div>
-            {movie.cast.map((actor, index) => {
-                return(
-                <span key={index}>{actor}</span>
-                )
-            })}
-            {movie.genres.map((genre, index) => {
-                return(
-                <span key={index}>{genre}</span>
-                )
-            })}
-            <div>
-                <a href={`https://www.youtube.com/watch?v=${movie.video}`} target="_blank" rel="noreferrer">trailer</a>            
-            </div>
-            <div>{movie.price}</div>
-            <div>{movie.director}</div>
         </div>
     )
 };
