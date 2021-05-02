@@ -33,7 +33,7 @@ export function Login(){
             <div className="fatherLogin">
                 <div className="cntLogin">
                     <div className= "headerLgn">
-                        <p>Register</p>
+                        <p className="ttlLogin">Login</p>
                     </div>
                     <div className="mainLgn">
                         <div className="cntDates">
