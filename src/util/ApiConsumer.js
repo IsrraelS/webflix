@@ -37,6 +37,82 @@ const ApiConsumer = {
             console.log(error);
         }
     },
+    createRent : async (name, lastname, email, age, password) => {
+        try {
+            let response = await fetch(`${urlLocal}/singup`, 
+            { method: 'POST', 
+            body: JSON.stringify({ 
+                name: name,
+                lastname: lastname,
+                email: email, 
+                age: age,
+                admin: false,
+                password: password }),
+                headers:{'Content-Type': 'application/json'}
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    getUserRent : async (name, lastname, email, age, password) => {
+        try {
+            let response = await fetch(`${urlLocal}/singup`, 
+            { method: 'POST', 
+            body: JSON.stringify({ 
+                name: name,
+                lastname: lastname,
+                email: email, 
+                age: age,
+                admin: false,
+                password: password }),
+                headers:{'Content-Type': 'application/json'}
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    getAdminRent : async (name, lastname, email, age, password) => {
+        try {
+            let response = await fetch(`${urlLocal}/singup`, 
+            { method: 'POST', 
+            body: JSON.stringify({ 
+                name: name,
+                lastname: lastname,
+                email: email, 
+                age: age,
+                admin: false,
+                password: password }),
+                headers:{'Content-Type': 'application/json'}
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    deleteRent : async (name, lastname, email, age, password) => {
+        try {
+            let response = await fetch(`${urlLocal}/singup`, 
+            { method: 'POST', 
+            body: JSON.stringify({ 
+                name: name,
+                lastname: lastname,
+                email: email, 
+                age: age,
+                admin: false,
+                password: password }),
+                headers:{'Content-Type': 'application/json'}
+            });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
     getUser : async (token) => {
         try {
             let response = await fetch(`${urlLocal}/users`, 
