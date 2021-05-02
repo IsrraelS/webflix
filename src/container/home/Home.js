@@ -15,7 +15,10 @@ export function Home(){
                             <Carousel></Carousel>
                         </div>
                         <div className="mainFooter">
-                            <OverFlowRow></OverFlowRow>
+                            <OverFlowRow genre="Action"/>
+                        </div>
+                        <div className="mainFooter">
+                            <OverFlowRow genre="Comedy"/>
                         </div>
                     </div>
                 </div>

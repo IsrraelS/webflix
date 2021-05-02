@@ -125,6 +125,15 @@ const ApiConsumer = {
             console.log(error);
         }
     },
+    getMovies : async () => {
+        try {
+            let response = await fetch(`${urlLocal}/movies/`, { method: 'GET' });
+            response = await response.json();
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }
 
 export default ApiConsumer
