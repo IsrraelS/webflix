@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Login.scss';
-import ApiConsumer from "../../util/ApiConsumer";
 import React,{ useState } from 'react';
 import { useHistory } from "react-router";
 import { useDispatch, useSelector } from 'react-redux';
-import {loginAction} from '../../store/actions/loginActions';
 import apiLogin from '../../store/services/apiLogin';
 
 export function Login(){        
@@ -27,7 +25,7 @@ export function Login(){
 
     return(
         <form onSubmit={handleSubmit}>
-            {errorLogin == true && 
+            {errorLogin === true && 
                 <h2>ERROR en las credenciales</h2>
             }   
             <div className="fatherLogin">

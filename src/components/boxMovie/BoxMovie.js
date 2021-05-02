@@ -7,7 +7,7 @@ function BoxMovie(){
     return(
         <div className="boxMF">
             <div className="cntPoster">
-                <img src={ theGodfather } className="imgMF"></img>
+                <img src={ theGodfather } className="imgMF" alt=""></img>
             </div>
             <div className="cntTxt">
 

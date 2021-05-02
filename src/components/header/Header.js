@@ -15,7 +15,7 @@ export function Header(){
                             <div className="container-fluid">
                                 <Link className="navbar-brand" to="./">
                                     <div className="boxIcon">
-                                        <img className="iconWTF" src={ iconWTFRR }></img>
+                                        <img className="iconWTF" src={ iconWTFRR } alt=""></img>
                                     </div>
                                 </Link>
                                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
