@@ -34,23 +34,6 @@ const MovieDetail = (props) => {
             <div className="cntImgMD">
                 <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt="fondo" className="imgMD"/>
             </div>
-            <div>{movie.overview}</div>
-            <div>{movie.tagline}</div>
-            {cast.map((actor, index) => {
-                return(
-                <span key={index}>{actor}</span>
-                )
-            })}
-            {genres.map((genre, index) => {
-                return(
-                <span key={index}>{genre}</span>
-                )
-            })}
-            <div>
-                <a href={`https://www.youtube.com/watch?v=${movie.video}`} target="_blank" rel="noreferrer">trailer</a>            
-            </div>
-            <div>{movie.price}</div>
-            <div>{movie.director}</div>
         </div>
     )
 };
