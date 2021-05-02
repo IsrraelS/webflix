@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import ApiConsumer from "../../util/ApiConsumer";
+import { useSelector } from "react-redux";
 import './MovieDetail.scss'
+import { useHistory } from "react-router";
 
-const MovieDetail = (props) => {
+const MovieDetail = () => {
    
 //    const movie = {_id:"6086d0d20ff6d715e45ff5bf",
 //         cast:["yo", "tu"],
@@ -15,22 +16,16 @@ const MovieDetail = (props) => {
 //         price:0,
 //         video:"jBa_aHwCbC4",
 //         director:"Simon McQuoid"}
-    const [movie, setMovie] = useState({});
-    const [cast, setCast] = useState([]);
-    const [genres, setGenres] = useState([]);
-    const id = props.id;
-    useEffect(() => {
-        const getData= async () =>{
-            let result= await ApiConsumer.getMoviesById(id);
-            setMovie(result);
-            setCast(result.cast);         
-            setGenres(result.genres);
-        }
-        getData();            
-    }, [id])
+
+    const history = useHistory();
+    const movie = useSelector(state => state.movie);
+    const rent = () => {
+        console.log("funcion rentar")
+    }
 
     return (
-        <div className="cntMovieDetail">
+        <div className="cntMovieDetail">            
+            <h1>{movie.title}</h1>
             <div className="boxMD">
                 <div className="headerMD">
                     <div className="cntImgMD" >
@@ -38,6 +33,7 @@ const MovieDetail = (props) => {
                     </div>
                 </div>
                 <div className="mainMD">
+                    <button onClick={()=>rent(movie)}>Rent</button>
                     <div className="boxTxtM">  
                         <p className="sinopsis">Sinopsis</p>  
                         <div>{movie.overview}</div>
@@ -45,15 +41,15 @@ const MovieDetail = (props) => {
                         <p className="ttlTxt">Actors:</p>
                         {movie.cast.map((actor, index) => {
                             return(
-                                <div className="txtActors">
+                                <div key={index} className="txtActors">
                                     <span key={index}>{actor}</span>
                                 </div>
                             )
                         })}
-                        <p className="ttlTxt">Generes:</p>
+                        <p className="ttlTxt">Genres:</p>
                         {movie.genres.map((genre, index) => {
                             return(
-                                <div className="txtGeneres">
+                                <div key={index} className="txtGeneres">
                                     <span key={index}>{genre}</span>
                                 </div>
                             )

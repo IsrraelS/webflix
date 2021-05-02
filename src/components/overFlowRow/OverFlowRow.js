@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ApiConsumer from "../../util/ApiConsumer";
 import './OverFlowRow.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 import BoxMovie from "../boxMovie/BoxMovie";
+import { useHistory } from "react-router";
+import { movieAction } from "../../store/actions/movieActions";
 
 function OverFlowRow(props){
     let [movies, setMovies] = useState([]);
     const token = useSelector(state => state.token.jwt);
-    console.log(token);
     const genre = props.genre;
     const actor = props.actor;
     const title = props.title;
@@ -31,11 +32,20 @@ function OverFlowRow(props){
         apiFunction = ApiConsumer.getMoviesByDirector;
         parametro = director;
     }
-    useEffect(async () => {
-        let result= await apiFunction(token, parametro);
-        setMovies(result);
-        console.log(result);
-    }, [])
+    useEffect(() => {
+        const getMovies = async () => {
+            let result= await apiFunction(token, parametro);
+            setMovies(result);
+        }
+        getMovies();
+    }, []);
+
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const detalles = (movie) => {
+        dispatch(movieAction(movie));
+        history.push('/movieDetail');
+    }
 
     return(
         <div className="overflow-auto cntMF">
@@ -43,6 +53,8 @@ function OverFlowRow(props){
                 return (
                     <BoxMovie 
                     key={index} 
+                    movie={movie} 
+                    funcion={detalles} 
                     ruta={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
                     tagline={movie.tagline} />
                 )}

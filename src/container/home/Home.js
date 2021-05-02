@@ -17,9 +17,6 @@ export function Home(){
                         <div className="mainFooter">
                             <OverFlowRow genre="Action"/>
                         </div>
-                        <div className="mainFooter">
-                            <OverFlowRow genre="Comedy"/>
-                        </div>
                     </div>
                 </div>
             </div>
