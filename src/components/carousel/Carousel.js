@@ -1,10 +1,11 @@
 import './Carousel.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch } from 'react-redux';
+import { useHistory } from "react-router";
 import ApiConsumer from "../../util/ApiConsumer";
 import ImageHolder from '../ImageHolder/ImageHolder.js';
-import LordOfRings1 from "./img/LordOfRings1.jpeg";
+import { movieAction } from '../../store/actions/movieActions';
 
 
 function Carousel(){
@@ -17,10 +18,11 @@ function Carousel(){
         }      
         getMovies();  
     }, [])
-    const detalles = (id) => {
-        //puedo guardar el id en store y al dirigir en detalles de pelicula recuperar el id del store
-        // hay que redirigir a detalles de pelicula
-        console.log("prueba", id)
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const detalles = (movie) => {
+        dispatch(movieAction(movie));
+        history.push('/movieDetail');
     }
 
     return(
@@ -33,22 +35,11 @@ function Carousel(){
                         <ImageHolder 
                         activo={active}
                         key={index} 
-                        id={movie._id} 
+                        peli={movie} 
                         funcion={detalles} 
                         ruta = {`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}/>
                     )
                 })}
-
-                {/*                         
-                <div className="carousel-item active">
-                    <img src={ LordOfRings1 } className="d-block w-100" alt="..."/>
-                </div>
-                <div className="carousel-item">
-                    <img src={ LordOfRings2 } className="d-block w-100" alt="..."/>
-                </div>
-                <div className="carousel-item">
-                    <img src={ LordOfRings3 } className="d-block w-100" alt="..."/>
-                </div> */}
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -59,8 +50,7 @@ function Carousel(){
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-
     )
-
 }
+
 export default Carousel;

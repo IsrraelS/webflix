@@ -38,7 +38,7 @@ export function Header(){
                                             </Link>
                                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                 <li><Link className="dropdown-item" to="#">Title</Link></li>
-                                                <li><Link className="dropdown-item" to="#">Generes</Link></li>
+                                                <li><Link className="dropdown-item" to="#">Genres</Link></li>
                                                 <li><Link className="dropdown-item" to="#">Actors</Link></li>
                                             </ul>
                                         </li>
