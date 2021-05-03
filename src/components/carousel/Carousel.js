@@ -8,6 +8,7 @@ import ImageHolder from '../ImageHolder/ImageHolder.js';
 import { movieAction } from '../../store/actions/movieActions';
 
 
+
 function Carousel(){
 
     let [movies, setMovies] = useState([]);
