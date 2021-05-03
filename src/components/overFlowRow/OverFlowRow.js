@@ -8,6 +8,7 @@ import { useHistory } from "react-router";
 import { movieAction } from "../../store/actions/movieActions";
 
 function OverFlowRow(props){
+
     let [movies, setMovies] = useState([]);
     const token = useSelector(state => state.token.jwt);
     const genre = props.genre;
@@ -53,14 +54,14 @@ function OverFlowRow(props){
                 return (
                     <BoxMovie 
                     key={index} 
-                    movie={movie} 
+                    movies={movie} 
                     funcion={detalles} 
                     ruta={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
                     tagline={movie.tagline} />
                 )}
             )}  
             
-    </div>
+        </div>
 
     )
 }
