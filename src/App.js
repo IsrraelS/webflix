@@ -7,8 +7,8 @@ import { Register } from './container/form/Register';
 import { Login } from './container/form/Login';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import MoviesRented from './components/MoviesRented/MoviesRented.js';
+import { Intro } from './container/intro/Intro';
 import { Entry } from './container/entry/Entry';
-import Search from './components/Search/Search.js';
 
 function App() {
   return (
@@ -18,6 +18,10 @@ function App() {
             <Header></Header>
 
           <Switch>
+
+            <Route path="/intro">
+              <Intro></Intro>
+            </Route>
 
             <Route path="/entry">
               <Entry></Entry>
@@ -41,10 +45,6 @@ function App() {
 
             <Route path="/moviesRented">
               <MoviesRented></MoviesRented>
-            </Route>
-            
-            <Route path="/search">
-              <Search></Search>
             </Route>
 
           </Switch>
