@@ -35,8 +35,9 @@ function OverFlowRow(props){
     }
     useEffect(() => {
         const getMovies = async () => {
-            let result= await apiFunction(token, parametro);
+            let result= await apiFunction(parametro);
             setMovies(result);
+            console.log(result);
         }
         getMovies();
     }, []);
