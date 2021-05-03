@@ -6,13 +6,25 @@ import { Footer } from './components/footer/Footer';
 import { Register } from './container/form/Register';
 import { Login } from './container/form/Login';
 import MovieDetail from './components/MovieDetail/MovieDetail';
+import { Intro } from './container/intro/Intro';
+import { Entry } from './container/entry/Entry';
 
 function App() {
   return (
       <div className="app">
           <BrowserRouter>
+
             <Header></Header>
+
           <Switch>
+
+            <Route path="/intro">
+              <Intro></Intro>
+            </Route>
+
+            <Route path="/entry">
+              <Entry></Entry>
+            </Route>
 
             <Route path="/" exact>
               <Home></Home>
@@ -31,7 +43,9 @@ function App() {
             </Route>
 
           </Switch>
+
             <Footer></Footer>
+
           </BrowserRouter>
       </div>
   );

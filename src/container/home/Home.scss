@@ -15,12 +15,12 @@
             background-color: #364156;
 
                 @media(min-width:768px){
-                    height: 45em;
+                    height: 130em;
 
                 }
 
                 @media(min-width:1024px){
-                    height: 60em;
+                    height: 150em;
 
                 }
 
@@ -34,15 +34,39 @@
                     @media (min-width: 768px){
                         display: flex;
                         flex-direction: column;
-                        height: 40em;
+                        height: 128em;
+
                     }
 
                     @media (min-width: 1024px){
                         display: flex;
                         flex-direction: column;
-                        height: 55em;
+                        height: 149em;
                     }
                 
+                        .txtTop{
+                            font-size: 1.5em;
+                                
+                                @media (min-width: 768px){
+                                    font-size: 3em;
+                                }
+            
+                                @media (min-width: 1024px){
+                                    font-size: 3.5em;
+                                }
+                        }
+
+                        .txtGeneres{
+                            font-size: 1em;
+                                @media (min-width: 768px){
+                                    font-size: 1.5em;
+                                }
+            
+                                @media (min-width: 1024px){
+                                    font-size: 2em;
+                                }
+                        }
+
                         .carouselHome{
                             width: 19em;
                             height: 10.65em;
@@ -53,12 +77,12 @@
                         
                                 @media(min-width: 768px){
                                     width: 45em;
-                                    height: 28.1em;
+                                    height: 25.33em;
                                 }
 
                                 @media(min-width: 1024px){
                                     width: 55em;
-                                    height: 34.3em;
+                                    height: 31em;
                                 }
                         
                         }
@@ -76,12 +100,12 @@
 
                                 @media(min-width: 768px){
                                     width: 45em;
-                                    height: 10em;
+                                    height: 12em;
                                 }
 
                                 @media(min-width: 1024px){
-                                    width: 55em;
-                                    height: 15em;
+                                    width: 64em;
+                                    height: 15.2em;
                                 }
 
                                 .cntMF{
@@ -91,7 +115,15 @@
                                     flex-direction: row;
                                     justify-content: space-between;
 
-                                
+                                        @media(min-width: 768px){
+                                            width: 400%;
+                                            height: 12.2em;
+                                        }
+        
+                                        @media(min-width: 1024px){
+                                            width: 322%;
+                                            height: 15em;
+                                        }
                                             
                                     .boxMF{
                                         width: 4.95em;
@@ -100,16 +132,43 @@
                                         border: 1px solid black;
                                         border-radius: 2px;
                                         box-shadow: 3px 3px #9292928e;
+
+                                        @media(min-width: 768px){
+                                            width: 8.5em;
+                                            height: 12em;
+                                        }
+        
+                                        @media(min-width: 1024px){
+                                            width: 10em;
+                                            height: 14.8em;
+                                        }
                                     
                                     
                                             .cntPoster{
                                                 width: 100%;
                                                 height: 7.85em;
+
+                                                @media(min-width: 768px){
+                                                    height: 12em;
+                                                }
+                
+                                                @media(min-width: 1024px){
+                                                    height: 14.7em;
+                                                }
                                     
                                     
                                                 .imgMF{
                                                     width: 100%;
                                                     height: 7.85em;
+                                                
+                                                
+                                                    @media(min-width: 768px){
+                                                        height: 11.84em;
+                                                    }
+                    
+                                                    @media(min-width: 1024px){
+                                                        height: 14.67em;
+                                                    }
                                                 }
                                     
                                             }
