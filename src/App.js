@@ -6,6 +6,7 @@ import { Footer } from './components/footer/Footer';
 import { Register } from './container/form/Register';
 import { Login } from './container/form/Login';
 import MovieDetail from './components/MovieDetail/MovieDetail';
+import MoviesRented from './components/MoviesRented/MoviesRented.js';
 import { Intro } from './container/intro/Intro';
 import { Entry } from './container/entry/Entry';
 
@@ -40,6 +41,10 @@ function App() {
 
             <Route path="/movieDetail">
               <MovieDetail></MovieDetail>
+            </Route>
+
+            <Route path="/moviesRented">
+              <MoviesRented></MoviesRented>
             </Route>
 
           </Switch>
