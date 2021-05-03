@@ -2,15 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Header.scss'
 import iconWTFRR from "../../iconWTFRR.png"
-import { useDispatch } from "react-redux";
-import { searchAction } from "../../store/actions/searchActions";
 
 
 export function Header(){
-    const dispatch = useDispatch();
-    const setSeaarchCriteria = (criterio) => {
-        dispatch(searchAction(criterio));
-    };
 
     return(
         <div className="header">
@@ -46,10 +40,9 @@ export function Header(){
                                                 Search
                                             </Link>
                                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <li><Link className="dropdown-item" to="/search" onClick={() => setSeaarchCriteria("title")}>Title</Link></li>
-                                                <li><Link className="dropdown-item" to="/search" onClick={() => setSeaarchCriteria("genre")}>Genres</Link></li>
-                                                <li><Link className="dropdown-item" to="/search" onClick={() => setSeaarchCriteria("actor")}>Actors</Link></li>
-                                                <li><Link className="dropdown-item" to="/search" onClick={() => setSeaarchCriteria("director")}>Director</Link></li>
+                                                <li><Link className="dropdown-item" to="#">Title</Link></li>
+                                                <li><Link className="dropdown-item" to="#">Genres</Link></li>
+                                                <li><Link className="dropdown-item" to="#">Actors</Link></li>
                                             </ul>
                                         </li>
                                     </ul>
