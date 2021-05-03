@@ -128,12 +128,11 @@ const ApiConsumer = {
             console.log(error);
         }
     },
-    getMoviesByGenre : async (token, genre) => {
+    getMoviesByGenre : async ( genre) => {
         try {
             let response = await fetch(`${urlLocal}/movies/genre`, 
             { method: 'GET',             
                 headers:{
-                    'token': token,
                     'genre': genre
                 }
             });
@@ -143,12 +142,11 @@ const ApiConsumer = {
             console.log(error);
         }
     },
-    getMoviesByActor : async (token, actors) => {
+    getMoviesByActor : async ( actors) => {
         try {
             let response = await fetch(`${urlLocal}/movies/actors`, 
             { method: 'GET',             
                 headers:{
-                    'token': token,
                     'actors': actors
                 }
             });
@@ -158,12 +156,11 @@ const ApiConsumer = {
             console.log(error);
         }
     },
-    getMoviesByTitle : async (token, title) => {
+    getMoviesByTitle : async ( title) => {
         try {
             let response = await fetch(`${urlLocal}/movies/title`, 
             { method: 'GET',             
                 headers:{
-                    'token': token,
                     'title': title
                 }
             });
@@ -173,12 +170,11 @@ const ApiConsumer = {
             console.log(error);
         }
     },
-    getMoviesByDirector : async (token, director) => {
+    getMoviesByDirector : async ( director) => {
         try {
             let response = await fetch(`${urlLocal}/movies/director`, 
             { method: 'GET',             
                 headers:{
-                    'token': token,
                     'director': director
                 }
             });
