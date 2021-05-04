@@ -49,26 +49,35 @@ const Search = () => {
     }
     
     return (
-        <>
-        <br/><br/><br/>
-            <div>
-                {criteria}
+        <div className="cntSearch">
+            <h3 className="txtS">Search</h3>
+            <div className="cntMainS">
+                <div className="txtUse">
+                    <p>From here, you can search for all the movies you want to see, by name, title, genre, actors and directors.</p> 
+                </div>
+                <div className="boxSearch">
+                    <div className="boxInfo">
+                        {criteria}
+                    </div>
+                    <div className="boxIB">
+                        <input type="text" onChange={(e) => setTexto(e.target.value)} ></input>
+                        <button onClick={(e) => buscarMovies(e)}>Search</button>
+                    </div>
+                    <div className="contenedor">
+                        {movies.map((movie, index ) => {
+                            return (
+                                <BoxMovie 
+                                key={index} 
+                                movies={movie} 
+                                funcion={detalles} 
+                                ruta={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
+                                tagline={movie.tagline} />
+                            )}
+                        )}  
+                    </div>
+                </div>
             </div>
-            <input type="text" onChange={(e) => setTexto(e.target.value)} ></input>
-            <button onClick={(e) => buscarMovies(e)}>Search</button>
-            <div className="contenedor">
-            {movies.map((movie, index ) => {
-                return (
-                    <BoxMovie 
-                    key={index} 
-                    movies={movie} 
-                    funcion={detalles} 
-                    ruta={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} 
-                    tagline={movie.tagline} />
-                )}
-            )}  
-            </div>
-        </>
+        </div>
     )
 }
 

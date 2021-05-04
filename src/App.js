@@ -22,7 +22,7 @@ function App() {
             </Route>
 
             <Route path="/" exact>
-            <Header></Header>
+              <Header></Header>
               <Home></Home>
             </Route>
 
@@ -35,20 +35,24 @@ function App() {
             </Route>
 
             <Route path="/movieDetail">
-            <Header></Header>
+              <Header></Header>
               <MovieDetail></MovieDetail>
             </Route>
 
-            <Route path="/moviesRented">
+            <Route path="/moviesRented">      
+              <Header></Header>
               <MoviesRented></MoviesRented>
             </Route>
             
             <Route path="/search">
+              <Header></Header>
               <Search></Search>
             </Route>
 
           </Switch>
+
             <Footer></Footer>
+
           </BrowserRouter>
       </div>
   );
