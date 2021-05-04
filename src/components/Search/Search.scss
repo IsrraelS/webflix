@@ -9,11 +9,11 @@
     margin-top: 4em;
 
         @media (min-width:768px){
-            height: 29em;             
+            height: 40em;             
         }
 
         @media (min-width:1024px){
-            
+            height: 45em;
         }
 
         .txtS{
@@ -21,11 +21,11 @@
             font-size: 2em;
 
                 @media (min-width:768px){
-                            
+                    font-size: 3em;          
                 }
         
                 @media (min-width:1024px){
-                    
+                    font-size: 4em; 
                 }
         
         }
@@ -38,11 +38,11 @@
             height: 20em;
 
             @media (min-width:768px){
-                            
+                height: 30em;         
             }
     
             @media (min-width:1024px){
-                
+                height: 35em; 
             }
 
             .txtUse{
@@ -55,6 +55,29 @@
                 box-shadow: 5px 5px;
                 //border: 0.5px solid black;
 
+                @media (min-width:768px){
+                    width: 35em;
+                    height: 10em;
+                    padding: 10px;   
+                }
+        
+                @media (min-width:1024px){
+                    width: 45em;
+                    height: 12em;
+                    padding: 12px;
+                }
+
+                .txtP{
+                    font-size: 1em;
+                
+                    @media (min-width:768px){
+                        font-size: 1.5em;
+                    }
+            
+                    @media (min-width:1024px){
+                        font-size: 2.2em;
+                    }
+                }
             }
 
             .boxSearch{
@@ -63,11 +86,15 @@
                 //border: 0.5px solid black;
 
                     @media (min-width:768px){
-                        
+                        width: 35em;
+                        height: 18em;
+
                     }
             
                     @media (min-width:1024px){
-                        
+                        width: 46em;
+                        height: 25em;
+
                     }
 
                     .boxInfo{
@@ -80,6 +107,31 @@
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
+                        margin-top: 1em;
+
+                            @media (min-width:768px){
+                                margin-top: 2em;
+
+                            }
+                    
+                            @media (min-width:1024px){
+                                margin-top: 3em;
+
+                            }
+
+                           .impS{
+
+                                @media (min-width:768px){
+                                    width: 21em;
+
+                                }
+                        
+                                @media (min-width:1024px){
+                                    width: 30em;
+                                    
+                                }
+
+                           } 
 
                     }
                     
