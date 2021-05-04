@@ -6,7 +6,9 @@ import { Footer } from './components/footer/Footer';
 import { Register } from './container/form/Register';
 import { Login } from './container/form/Login';
 import MovieDetail from './components/MovieDetail/MovieDetail';
+import MoviesRented from './components/MoviesRented/MoviesRented.js';
 import { Entry } from './container/entry/Entry';
+import Search from './components/Search/Search.js';
 
 function App() {
   return (
@@ -35,6 +37,14 @@ function App() {
             <Route path="/movieDetail">
             <Header></Header>
               <MovieDetail></MovieDetail>
+            </Route>
+
+            <Route path="/moviesRented">
+              <MoviesRented></MoviesRented>
+            </Route>
+            
+            <Route path="/search">
+              <Search></Search>
             </Route>
 
           </Switch>

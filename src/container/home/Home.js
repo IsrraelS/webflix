@@ -25,11 +25,11 @@ export function Home(){
                         </div>
                         <h5 className="txtGeneres">Suspense</h5>
                         <div className="mainFooter">
-                            <OverFlowRow genre="Suspense"/>
+                            <OverFlowRow genre="Thriller"/>
                         </div>
                         <h5 className="txtGeneres">Terror</h5>
                         <div className="mainFooter">
-                            <OverFlowRow genre="Terror"/>
+                            <OverFlowRow genre="Horror"/>
                         </div>
                         <h5 className="txtGeneres">Drama</h5>
                         <div className="mainFooter">

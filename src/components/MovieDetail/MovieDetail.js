@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import './MovieDetail.scss'
 import { useHistory } from "react-router";
+import ApiConsumer from "../../util/ApiConsumer";
 
 const MovieDetail = () => {
    
@@ -17,10 +18,22 @@ const MovieDetail = () => {
          video:"jBa_aHwCbC4",
          director:"Simon McQuoid"}*/
 
+    let [rented, setRented] = useState(true);
+
+    useEffect(() =>{
+        const checkAvailable = async () => {
+            let repetido = await ApiConsumer.checkRent(movie._id, user._id);
+            repetido? setRented(true): setRented(false);
+        }
+        checkAvailable();
+    }, [])
+
     const history = useHistory();
     const movie = useSelector(state => state.movie);
-    const rent = () => {
-        console.log("funcion rentar")
+    const user = useSelector(state => state.user);
+    const rent = async (movie, usuario) => {
+        let result = await ApiConsumer.createRent(movie, user);
+        setRented(true);
     }
 
     return (
@@ -33,7 +46,7 @@ const MovieDetail = () => {
                     </div>
                 </div>
                 <div className="mainMD">
-                  <button onClick={()=>rent(movie)}>Rent</button>
+                  {!rented && <button onClick={()=>rent(movie, user)}>Rent</button>}                  
                     <div className="boxTxtM">  
                         <p className="sinopsis">Sinopsis</p>  
                         <div>{movie.overview}</div>
