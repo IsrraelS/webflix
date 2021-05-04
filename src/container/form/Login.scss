@@ -8,11 +8,11 @@
     box-shadow: 5px 5px gray;
 
         @media (min-width:768px){
-
+            height: 36em;
         }
 
         @media (min-width:1024px){
-            
+            height: 40em;
         }
         .cntLogin{
             width: 19em;
@@ -22,26 +22,38 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 4em;
             border-radius: 5px;
             box-shadow: 5px 5px;
             background: #364156;
 
+
+                @media (min-width:768px){
+                    width: 22em;
+                    height: 30em;
+                }
+        
+                @media (min-width:1024px){
+                    width: 38em;
+                    height: 32em;
+                }
+
             .headerLgn{
                 text-align: center;
 
-                    @media (min-width:768px){
-
-                    }
-            
-                    @media (min-width:1024px){
-                        
-                    }
 
                     .ttlLogin{
-                        font-size: 30px;
+                        font-size: 2.5em;
                         font-family: 'Bitter', serif;
                         margin: 0;
+
+                        @media (min-width:768px){
+                            font-size: 4em;
+                        }
+                
+                        @media (min-width:1024px){
+                            font-size: 6em;
+                            
+                        }
 
                     }
             }
@@ -49,14 +61,80 @@
             .mainLgn{
                 height: 11em;
                 width: 11em;
-                padding-top: 0.5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                //padding-top: 0.5em;
 
                     @media (min-width:768px){
+                        height: 12em;
+                        width: 14em;
 
                     }
             
                     @media (min-width:1024px){
-                        
+                        height: 15em;
+                        width: 18em;
+                    }
+
+                    .cntDates{
+                        background: unset;
+
+                         .emailLgn {
+                             font-size: 1.2em;
+
+                            @media (min-width:768px){
+                                font-size: 1.5em;
+                            }
+                    
+                            @media (min-width:1024px){
+                                font-size: 2em;
+                                
+                            }
+                         }
+
+                         .iptEmL {
+                             width: 11em;
+
+                            @media (min-width:768px){
+                                width: 14em;
+                            }
+                    
+                            @media (min-width:1024px){
+                                width: 18em;
+                            }
+
+                         }
+
+                         .passwordLgn {
+                            font-size: 1.2em;
+
+                           @media (min-width:768px){
+                               font-size: 1.5em;
+                           
+                            }
+                   
+                           @media (min-width:1024px){
+                                font-size: 2em;
+                               
+                           }
+                        }
+
+                        .iptPwL {
+                            width: 11em;
+
+                           @media (min-width:768px){
+                               width: 14em;
+
+                           }
+                   
+                           @media (min-width:1024px){
+                                width: 18em;
+                               
+                           }
+                           
+                        }
+
                     }
             }
 
@@ -65,16 +143,49 @@
                 width: 19em;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 align-items: center;
 
                     @media (min-width:768px){
-
+                        height: 8em;
                     }
             
                     @media (min-width:1024px){
+                        height: 10em;
                         
                     }
+                    
+                    .btnSubmit{
+                        background-color:teal;
+                        border-radius: 5px;
+                    
+                    
+                        @media (min-width:768px){
+                            transform: scale(1.2);
+                        }
+                
+                        @media (min-width:1024px){
+                            transform: scale(1.5);
+                            
+                        }
+                    
+                    }
+
+                    .txtRgtr{
+                        font-size: 14px;
+                        
+                        @media (min-width:768px){
+                            font-size: 18px;
+                        }
+                
+                        @media (min-width:1024px){
+                            font-size: 27px;
+                            width: 16em;
+                            
+                        }
+                    
+                    }
+
             }
         
         }

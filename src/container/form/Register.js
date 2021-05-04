@@ -35,27 +35,27 @@ export function Register(){
                     <div className="mainRgtr">
                         <div className="cntDates">
                             <label className="nameRgtr">Name</label>
-                            <input type="text" placeholder="Name"
+                            <input className="impN" type="text" placeholder="Name"
                                 name="name" onChange={e => setName(e.target.value)} required></input>
                         </div>
                         <div className="cntDates">
                             <label className="lastNameRgtr">Last Name:</label>
-                            <input type="text" placeholder="Last Name" 
+                            <input className="impLN" type="text" placeholder="Last Name" 
                                 name="lastname" onChange={e => setLastname(e.target.value)} required></input>
                         </div>
                         <div className="cntDates">
                             <label className="emailRgtr">E-mail:</label>
-                            <input type="email" placeholder="E-mail" 
+                            <input className="impE" type="email" placeholder="E-mail" 
                                 name="email" onChange={e => setEmail(e.target.value)} required></input>
                         </div>
                         <div className="cntDates">
                             <label className="dateOfBirthRgtr">Date Of Birth</label>
-                            <input type="date" 
+                            <input className="impDB" type="date" 
                             name="dateOfBirdth" onChange={e => handleAge(e)} required></input>
                         </div>
                         <div className="cntDates">
                             <label className="passwordRgtr">Password:</label>
-                            <input type="password" placeholder="Password" 
+                            <input className="impP" type="password" placeholder="Password" 
                             name="password" onChange={e => setPassword(e.target.value)} required></input>
                         </div>
                     </div>

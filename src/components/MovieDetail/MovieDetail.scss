@@ -1,21 +1,42 @@
 .cntMovieDetail{
-  height: 60em;
+  height: 68em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #506c64;
 
+    @media (min-width:768px){
+      height: 77em;
+    
+    }
+
+    @media (min-width:1024px){
+      height: 95em;
+     
+    }
+
 
     .boxMD{
       width: 19em;
-      height: 47.2em;
+      height: 55em;
       //border: 1px solid black;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
       box-shadow: 5px 5px;
       background: #364156;
+
+        @media (min-width:768px){
+          width: 30em;
+          height: 64em;
+        }
+    
+        @media (min-width:1024px){
+          width: 40em;
+          height: 82em;
+          
+        }
 
 
           .headerMD{
@@ -25,6 +46,16 @@
             justify-content: center;
             align-items: center;
 
+              @media (min-width:768px){
+                height: 17em;
+      
+              }
+          
+              @media (min-width:1024px){
+                height: 23em;
+              
+              }
+
               .cntImgMD{
                 display: flex;
 
@@ -32,25 +63,60 @@
                   .imgMD{
                     height: 10em;
                     width: 100%;
+                  
+                      @media (min-width:768px){
+                        height: 17em;
+              
+                      }
+                  
+                      @media (min-width:1024px){
+                        height: 23em;
+                        
+                      }
+
                   }
               }
           }
           
           .mainMD{
-            height: 30em;
+            height: 36em;
 
-              .sinopsis{
-                margin: 0;
-                padding-top: 1em;
-                padding-bottom: 1em;
-                background: #666b6a;             
-                text-align: center;
+              @media (min-width:768px){
+                height: 37em;
+      
+              }
+          
+              @media (min-width:1024px){
+                height: 47em;
+              
+                
               }
               
               .boxTxtM{
                 text-align: justify;
                 padding: 5px;
                 height: 30em;
+                
+
+                @media (min-width:768px){
+                  font-size: 1.2em;
+
+        
+                }
+            
+                @media (min-width:1024px){
+                  font-size: 1.5em;
+                
+                  
+                }
+
+                .sinopsis{
+                  margin: 0;
+                  padding-top: 1em;
+                  padding-bottom: 1em;
+                  background: #666b6a;             
+                  text-align: center;
+                }
 
                 .ttlTxt{
                   margin: 0;
@@ -80,15 +146,27 @@
           }
 
           .footerMD{
-            height: 7em;
+            height: 8em;
             margin-top: 1em;
             display: flex;
             flex-direction: column;
             align-items: center;
             background: #666b6a;
 
+              @media (min-width:768px){
+                height: 9em;
+                font-size: 1.2em;
+      
+              }
+          
+              @media (min-width:1024px){
+                height: 7em;
+                font-size: 1.5em;
+                
+              }
+
               .cntTrailer{
-                  height: 2em;
+                height: 2em;
               }
               
               .cntPrice{
