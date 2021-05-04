@@ -37,16 +37,18 @@ const MoviesBox = (props) => {
     
         
     return(       
-        <>
+        <div className="">
             {movies.map((movie, index ) => {
                 return (
-                    <div key={index} className="movie-box">
-                        <div>{movie.title}</div>
-                        <img className="image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} />
+                    <div className="cntMovieBox">
+                        <div key={index} className="movie-box">
+                            <div>{movie.title}</div>
+                            <img className="image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} />
+                        </div>
                     </div>  
                 )}
             )}  
-        </>
+        </div>
     )
 }
 
