@@ -1,0 +1,83 @@
+.fatherLogin{
+    height: 34em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #506c64;
+    box-shadow: 5px 5px gray;
+
+        @media (min-width:768px){
+
+        }
+
+        @media (min-width:1024px){
+            
+        }
+        .cntLogin{
+            width: 19em;
+            height: 22em;
+            //border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 4em;
+            border-radius: 5px;
+            box-shadow: 5px 5px;
+            background: #364156;
+
+            .headerLgn{
+                text-align: center;
+
+                    @media (min-width:768px){
+
+                    }
+            
+                    @media (min-width:1024px){
+                        
+                    }
+
+                    .ttlLogin{
+                        font-size: 30px;
+                        font-family: 'Bitter', serif;
+                        margin: 0;
+
+
+                    }
+            }
+
+            .mainLgn{
+                height: 11em;
+                width: 11em;
+                padding-top: 0.5em;
+
+                    @media (min-width:768px){
+
+                    }
+            
+                    @media (min-width:1024px){
+                        
+                    }
+            }
+
+            .footerLgn{
+                height: 6em;
+                width: 19em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                    @media (min-width:768px){
+
+                    }
+            
+                    @media (min-width:1024px){
+                        
+                    }
+            }
+        
+        }
+
+}

@@ -1,29 +1,58 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Header.scss'
+import iconWTFRR from "../../iconWTFRR.png"
+import { useDispatch } from "react-redux";
+import { searchAction } from "../../store/actions/searchActions";
+
 
 export function Header(){
+    const dispatch = useDispatch();
+    const setSeaarchCriteria = (criterio) => {
+        dispatch(searchAction(criterio));
+    };
 
     return(
         <div className="header">
             <div className="cntHeader">
                 <div className="boxHeader">
-                    <div className="cntLogo">
-                        <p>Header</p>
-                    </div>
                     <div className="cntNavbar">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <div class="container-fluid">
-                                <a class="navbar-brand" href="#">Navbar</a>
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                            <div className="container-fluid">
+                                <Link className="navbar-brand" to="./">
+                                    <div className="boxIcon">
+                                        <img className="iconWTF" src={ iconWTFRR } alt=""></img>
+                                    </div>
+                                </Link>
+                                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
                                 </button>
-                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                <div class="navbar-nav">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                    <a class="nav-link" href="#">Features</a>
-                                    <a class="nav-link" href="#">Pricing</a>
-                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                </div>
+                                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul className="navbar-nav">
+                                        <li className="nav-item">
+                                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/register">Register</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/login">Login</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/moviesRented">Movies Rented</Link>
+                                        </li>
+                                        <li className="nav-item dropdown">
+                                            <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Search
+                                            </Link>
+                                            <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><Link className="dropdown-item" to="/search" onClick={() => setSeaarchCriteria("title")}>Title</Link></li>
+                                                <li><Link className="dropdown-item" to="/search" onClick={() => setSeaarchCriteria("genre")}>Genres</Link></li>
+                                                <li><Link className="dropdown-item" to="/search" onClick={() => setSeaarchCriteria("actor")}>Actors</Link></li>
+                                                <li><Link className="dropdown-item" to="/search" onClick={() => setSeaarchCriteria("director")}>Director</Link></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </nav>

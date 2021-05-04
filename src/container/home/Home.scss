@@ -3,48 +3,194 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 4em;
 
         .cntMain{
             width: 100%;
-            height: 30em;
+            height: 72em;
             display: flex;
             align-items: center;
             justify-content: space-around;
-            border: 0.5px solid black;
-            background-color: #a5b452;
+            //border: 0.5px solid black;
+            background-color: #364156;
 
-                .main{
+                @media(min-width:768px){
+                    height: 130em;
+
+                }
+
+                @media(min-width:1024px){
+                    height: 150em;
+
+                }
+
+                .centralMain{
+                    height: 72em;
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
+
+                    @media (min-width: 768px){
+                        display: flex;
+                        flex-direction: column;
+                        height: 128em;
+
+                    }
+
+                    @media (min-width: 1024px){
+                        display: flex;
+                        flex-direction: column;
+                        height: 149em;
+                    }
                 
-                        .article{
-                            width: 20em;
-                            height: 25em;
-                            border: 0.2 solid black;
-                            background-color: #c8d96f;
+                        .txtTop{
+                            font-size: 1.5em;
+                                
+                                @media (min-width: 768px){
+                                    font-size: 3em;
+                                }
+            
+                                @media (min-width: 1024px){
+                                    font-size: 3.5em;
+                                }
                         }
 
-                        .aside{
-                            width: 10em;
-                            height: 25em;
-                            border: 0.2 solid black;
-                            background-color: #c4f7a1;
+                        .txtGeneres{
+                            font-size: 1em;
+                                @media (min-width: 768px){
+                                    font-size: 1.5em;
+                                }
+            
+                                @media (min-width: 1024px){
+                                    font-size: 2em;
+                                }
+                        }
+
+                        .carouselHome{
+                            width: 19em;
+                            height: 10.65em;
+                            border: 1 solid black;
+                            border-radius: 2px;
+                            background-color: #cdcdcd;
+                            box-shadow: 3px 3px #9292928e;
+                        
+                                @media(min-width: 768px){
+                                    width: 45em;
+                                    height: 25.33em;
+                                }
+
+                                @media(min-width: 1024px){
+                                    width: 55em;
+                                    height: 31em;
+
+                                }
+                        
+                        }
+
+                        .mainFooter{
+                            width: 19em;
+                            height: 8.2em;
+                            overflow-x: scroll;
+                            overflow-y: hidden;
+                            //background-color: #dff8eb;
+                            border-radius: 2px;
+                            //box-shadow: 3px 3px #9292928e;
+                            //border: 1px solid black;
+
+
+                                @media(min-width: 768px){
+                                    width: 45em;
+                                    height: 12em;
+                                }
+
+                                @media(min-width: 1024px){
+                                    width: 64em;
+                                    height: 15.2em;
+                                }
+
+                                .cntMF{
+                                    width: 550%;
+                                    height: 8.2em;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+
+                                        @media(min-width: 768px){
+                                            width: 400%;
+                                            height: 12.2em;
+                                        }
+        
+                                        @media(min-width: 1024px){
+                                            width: 322%;
+                                            height: 15em;
+                                        }
+                                            
+                                    .boxMF{
+                                        width: 4.95em;
+                                        height: 8em;
+                                        background-color: #506c64;
+                                        border: 1px solid black;
+                                        border-radius: 2px;
+                                        box-shadow: 3px 3px #9292928e;
+
+                                        @media(min-width: 768px){
+                                            width: 8.5em;
+                                            height: 12em;
+                                        }
+        
+                                        @media(min-width: 1024px){
+                                            width: 10em;
+                                            height: 14.8em;
+                                        }
+                                    
+                                    
+                                            .cntPoster{
+                                                width: 100%;
+                                                height: 7.85em;
+
+                                                @media(min-width: 768px){
+                                                    height: 12em;
+                                                }
+                
+                                                @media(min-width: 1024px){
+                                                    height: 14.7em;
+                                                }
+                                    
+                                    
+                                                .imgMF{
+                                                    width: 100%;
+                                                    height: 7.85em;
+                                                
+                                                
+                                                    @media(min-width: 768px){
+                                                        height: 11.84em;
+                                                    }
+                    
+                                                    @media(min-width: 1024px){
+                                                        height: 14.67em;
+                                                    }
+                                                }
+                                    
+                                            }
+
+                                                /*.cntTxt{
+                                                    width: 100%;
+                                                    height: 1.4em;
+                                                    //border: 0.5px solid red;
+                                                    
+                                                }*/
+                                        
+                                    }
+                                        
+                                        
+
+                                                         
+                                }
                         }
                 
                 }
 
         }
 
-        .cntFooter{
-            width: 100%;
-            height: 10em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 0.5px solid black;
-            background-color: #9ba7c0;
-
-        }
 }

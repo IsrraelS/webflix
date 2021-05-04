@@ -1,0 +1,78 @@
+.fatherRegister{
+    height: 40em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #506c64;
+
+        @media (min-width:768px){
+
+        }
+
+        @media (min-width:1024px){
+            
+        }
+    
+        .cntRegister{
+            width: 19em;
+            height: 30em;
+            //border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3em;
+            border-radius: 5px;
+            box-shadow: 5px 5px;
+            background: #364156;
+        
+                .headerRgtr{
+                    display: contents;
+                    height: 4em;
+                    width: 19em;
+
+                        @media (min-width:768px){
+
+                        }
+                
+                        @media (min-width:1024px){
+                            
+                        }
+
+                        .ttlRgtr{
+                            font-size: 30px;
+                            font-family: 'Bitter', serif;
+                        }
+                }
+
+                .mainRgtr{
+                    height: 20em;
+                    width: 11em;
+
+                        @media (min-width:768px){
+
+                        }
+                
+                        @media (min-width:1024px){
+                            
+                        }
+                }
+
+                .footerRgtr{
+                    height: 4em;
+                    width: 19em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                        @media (min-width:768px){
+
+                        }
+                
+                        @media (min-width:1024px){
+                            
+                        }
+                }
+        }
+}
