@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import SingleRent from '../SingleRent/SingleRent.js';
 import { useSelector } from 'react-redux';
 import ApiConsumer from '../../util/ApiConsumer';
+import './Movies.Rented.scss'
 
 const MoviesRented = () => {
     
@@ -23,34 +24,34 @@ const MoviesRented = () => {
     }, []);
     
     return (
-        <>
+        <div className="cntRents">
             <br/><br/><br/>
             {orders.map((order, index) => {
                 return (
-                    <>
-                    {user.admin && 
-                        <SingleRent
-                        key = {index}
-                        user = {order.user.name}
-                        movie = {order.movie.title}
-                        startDate = {order.rent_date}
-                        endDate = {order.devolution_date}
-                    />
-                    }
-                    {!user.admin && 
-                        <SingleRent
-                        key = {index}
-                        user = ""
-                        movie = {order.movie.title}
-                        startDate = {order.rent_date}
-                        endDate = {order.devolution_date}
-                    />
-                    }
+                    <div className="boxRents">
+                        {user.admin && 
+                            <SingleRent
+                            key = {index}
+                            user = {order.user.name}
+                            movie = {order.movie.title}
+                            startDate = {order.rent_date}
+                            endDate = {order.devolution_date}
+                        />
+                        }
+                        {!user.admin && 
+                            <SingleRent
+                            key = {index}
+                            user = ""
+                            movie = {order.movie.title}
+                            startDate = {order.rent_date}
+                            endDate = {order.devolution_date}
+                        />
+                        }
                     
-                    </>
+                    </div>
                 )
             })}            
-        </>
+        </div>
     );
 }
 
