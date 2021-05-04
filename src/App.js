@@ -15,8 +15,6 @@ function App() {
       <div className="app">
           <BrowserRouter>
 
-            <Header></Header>
-
           <Switch>
 
             <Route path="/entry">
@@ -24,6 +22,7 @@ function App() {
             </Route>
 
             <Route path="/" exact>
+            <Header></Header>
               <Home></Home>
             </Route>
 
@@ -36,6 +35,7 @@ function App() {
             </Route>
 
             <Route path="/movieDetail">
+            <Header></Header>
               <MovieDetail></MovieDetail>
             </Route>
 
@@ -48,9 +48,7 @@ function App() {
             </Route>
 
           </Switch>
-
             <Footer></Footer>
-
           </BrowserRouter>
       </div>
   );

@@ -1,5 +1,5 @@
 .fatherRegister{
-    height: 40em;
+    height: 34em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,25 +7,36 @@
     background-color: #506c64;
 
         @media (min-width:768px){
-
+            height: 42em
         }
 
         @media (min-width:1024px){
+            height: 48em
             
         }
     
         .cntRegister{
             width: 19em;
-            height: 30em;
+            height: 32em;
             //border: 1px solid black;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 3em;
             border-radius: 5px;
             box-shadow: 5px 5px;
             background: #364156;
+
+            @media (min-width:768px){
+                width: 35em;
+                height: 40em;
+            }
+    
+            @media (min-width:1024px){
+                width: 40em;
+                height: 44em;
+                
+            }
         
                 .headerRgtr{
                     display: contents;
@@ -33,16 +44,25 @@
                     width: 19em;
 
                         @media (min-width:768px){
-
+                            height: 5em;
                         }
                 
                         @media (min-width:1024px){
+                            height: 6em;
                             
                         }
 
                         .ttlRgtr{
-                            font-size: 30px;
+                            font-size: 2em;
                             font-family: 'Bitter', serif;
+                        
+                            @media (min-width:768px){
+                                font-size: 3em;
+                            }
+                    
+                            @media (min-width:1024px){
+                                font-size: 4em;
+                            }
                         }
                 }
 
@@ -51,27 +71,182 @@
                     width: 11em;
 
                         @media (min-width:768px){
-
+                            height: 24em;
+                            width: 18em;
                         }
                 
                         @media (min-width:1024px){
+                            height: 28em;
+                            width: 25em;
+                            
+                        }
+
+                        .cntDates{
+                            background: unset;
+
+                            .nameRgtr{
+                                font-size: 1.2em;
+   
+                               @media (min-width:768px){
+                                   font-size: 1.5em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                   font-size: 2em;
+                                   
+                               }
+                            }
+   
+                            .impN {
+                                width: 11em;
+   
+                               @media (min-width:768px){
+                                   width: 18em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                   width: 25em;
+                               }
+   
+                            }
+                            .lastNameRgtr{
+                                font-size: 1.2em;
+   
+                               @media (min-width:768px){
+                                   font-size: 1.5em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                   font-size: 2em;
+                                   
+                               }
+                            }
+   
+                            .impLN {
+                                width: 11em;
+   
+                               @media (min-width:768px){
+                                   width: 18em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                    width: 25em;
+                               }
+   
+                            }
+
+                            .emailRgtr{
+                                font-size: 1.2em;
+   
+                               @media (min-width:768px){
+                                   font-size: 1.5em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                   font-size: 2em;
+                                   
+                               }
+                            }
+   
+                            .impE {
+                                width: 11em;
+   
+                               @media (min-width:768px){
+                                   width: 18em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                    width: 25em;
+                               }
+   
+                            }
+
+                            .dateOfBirthRgtr{
+                                font-size: 1.2em;
+   
+                               @media (min-width:768px){
+                                   font-size: 1.5em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                   font-size: 2em;
+                                   
+                               }
+                            }
+   
+                            .impDB {
+                                width: 11em;
+   
+                               @media (min-width:768px){
+                                   width: 18em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                    width: 25em;    
+                               }
+   
+                            }
+
+                            .passwordRgtr{
+                                font-size: 1.2em;
+   
+                               @media (min-width:768px){
+                                   font-size: 1.5em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                   font-size: 2em;
+                                   
+                               }
+                            }
+   
+                            .impP {
+                                width: 11em;
+   
+                               @media (min-width:768px){
+                                   width: 18em;
+                               }
+                       
+                               @media (min-width:1024px){
+                                    width: 25em;
+                               }
+   
+                            }
                             
                         }
                 }
 
                 .footerRgtr{
-                    height: 4em;
+                    height: 6em;
                     width: 19em;
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
+                    justify-content: space-evenly;
                     align-items: center;
 
                         @media (min-width:768px){
-
+                            height: 5em
                         }
                 
                         @media (min-width:1024px){
-                            
+                            height: 12em;
+
+                        }
+
+                        .btnRgtr{
+                            background-color:teal;
+                            border-radius: 5px;
+                        
+                        
+                            @media (min-width:768px){
+                                transform: scale(1.2);
+                            }
+                    
+                            @media (min-width:1024px){
+                                transform: scale(1.5);
+                                
+                            }
+                        
                         }
                 }
         }

@@ -45,7 +45,7 @@ export function Login(){
                     </div>
                     <div className="footerLgn">
                         <div className="btnIn">
-                            <button type='submit'>Sing In</button>
+                            <button className="btnSubmit" type='submit'>Sing In</button>
                         </div>
                         <div className="txtRgtr">
                             <p>No estas aun registrado? Pulsa <Link className="redirecRgtr" to="/register">Aqui</Link></p>
