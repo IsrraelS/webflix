@@ -43,4 +43,4 @@ The database is mongoDB
 - Admin feature to see all users rents
 
 ## GIT
-Webflix was made in collaboration of twon developers, Gabriel Abarca and Israel Sanchez. To administrate the work of both parts github repository was used, and any new feature was developed at a different branch.
+Webflix was made in collaboration of twon developers, Gabriel Abarca and Israel Sanchez. To administrate the work of both parts github repository was used, and any new feature was developed at a different branch and merged when finished.
