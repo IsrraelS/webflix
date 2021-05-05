@@ -2,6 +2,7 @@ import React from "react";
 import ApiConsumer from "../../util/ApiConsumer";
 import './Register.scss';
 import { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 export function Register(){
     let [name, setName] = useState("");
@@ -19,10 +20,11 @@ export function Register(){
         let edad = Math.floor((hoy - fechaNacimiento)/(1000*60*60*24*365));
         setAge(edad);        
     }
+    const history = useHistory();
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let respuesta = await ApiConsumer.register(name, lastname, email, age, password)
-        console.log(respuesta)
+        let respuesta = await ApiConsumer.register(name, lastname, email, age, password);
+        if (respuesta) history.push('/login');
     }    
     
     return(
@@ -62,6 +64,9 @@ export function Register(){
                     <div className="footerRgtr">
                         <div className="cntBtnRG">
                             <button className="btnRgtr" type='Submit'>Register</button>
+                        </div>
+                        <div className="txtRgtr">
+                            <p>Ya estas aun registrado? Pulsa <Link className="redirecRgtr" to="/login">Aqui</Link></p>
                         </div>
                     </div>
                 </div>

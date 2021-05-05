@@ -20,7 +20,7 @@ export function Login(){
     const errorLogin = useSelector(state => state.token.error)
 
     if (token) {
-        history.push('/');
+        history.push('/home');
     }
 
     return(

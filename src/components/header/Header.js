@@ -19,7 +19,7 @@ export function Header(){
                     <div className="cntNavbar">
                         <nav className="navbar navbar-expand-lg navbar-light bg-light">
                             <div className="container-fluid">
-                                <Link className="navbar-brand" to="./">
+                                <Link className="navbar-brand" to="./home">
                                     <div className="boxIcon">
                                         <img className="iconWTF" src={ iconWTFRR } alt=""></img>
                                     </div>
@@ -31,12 +31,6 @@ export function Header(){
                                     <ul className="navbar-nav">
                                         <li className="nav-item">
                                             <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" to="/register">Register</Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" to="/login">Login</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" to="/moviesRented">Movies Rented</Link>

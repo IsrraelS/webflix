@@ -17,34 +17,34 @@ function App() {
 
           <Switch>
 
-            <Route path="/entry">
+            <Route path="/" exact>
               <Entry></Entry>
             </Route>
 
-            <Route path="/" exact>
+            <Route path="/home" exact>
               <Header></Header>
               <Home></Home>
             </Route>
 
-            <Route path="/register">
+            <Route path="/register" exact>
               <Register></Register>
             </Route>
 
-            <Route path="/login">
+            <Route path="/login" exact>
               <Login></Login>
             </Route>
 
-            <Route path="/movieDetail">
+            <Route path="/movieDetail" exact>
               <Header></Header>
               <MovieDetail></MovieDetail>
             </Route>
 
-            <Route path="/moviesRented">      
+            <Route path="/moviesRented" exact>      
               <Header></Header>
               <MoviesRented></MoviesRented>
             </Route>
             
-            <Route path="/search">
+            <Route path="/search" exact>
               <Header></Header>
               <Search></Search>
             </Route>

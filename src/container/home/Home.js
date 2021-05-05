@@ -3,8 +3,13 @@ import './Home.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 import Carousel from '../../components/carousel/Carousel.js'
 import OverFlowRow from '../../components/overFlowRow/OverFlowRow.js'
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 
 export function Home(){
+    const history = useHistory();
+    const token = useSelector(state => state.token);
+    if(!token) history.push('/')
 
     return(
         <div className="main">
