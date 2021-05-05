@@ -46,7 +46,8 @@ const MovieDetail = () => {
                     </div>
                 </div>
                 <div className="mainMD">
-                  {!rented && <button onClick={()=>rent(movie, user)}>Rent</button>}                  
+                  {!rented && <button onClick={()=>rent(movie, user)}>Rent</button>} 
+                  {rented && <span className="alquilado">Alquilado</span>}                  
                     <div className="boxTxtM">  
                         <p className="sinopsis">Sinopsis</p>  
                         <div>{movie.overview}</div>

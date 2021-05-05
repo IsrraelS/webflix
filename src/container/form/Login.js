@@ -24,10 +24,7 @@ export function Login(){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            {errorLogin === true && 
-                <h2>ERROR en las credenciales</h2>
-            }   
+        <form onSubmit={handleSubmit}>              
             <div className="fatherLogin">
                 <div className="cntLogin">
                     <div className= "headerLgn">
@@ -50,6 +47,9 @@ export function Login(){
                         <div className="txtRgtr">
                             <p>No estas aun registrado? Pulsa <Link className="redirecRgtr" to="/register">Aqui</Link></p>
                         </div>
+                        {errorLogin === true && 
+                            <spam className="error">ERROR en las credenciales</spam>
+                        }
                     </div>
                 </div>
             </div>
