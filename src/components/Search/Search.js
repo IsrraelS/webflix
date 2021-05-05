@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { movieAction } from '../../store/actions/movieActions';
@@ -12,8 +12,10 @@ const Search = () => {
     let [texto, setTexto] = useState("")
     let [movies, setMovies] = useState([]);
 
-    const buscarMovies = (e) => {
-        e.preventDefault();
+    useEffect(()=>{
+        if(texto) buscarMovies();
+    },[texto])
+    const buscarMovies = () => {
         let busqueda;
         console.log(criteria)
         switch(criteria) {
@@ -53,16 +55,17 @@ const Search = () => {
             <h3 className="txtS">Search</h3>
             <div className="cntMainS">
                 <div className="txtUse">
-                    <p className="txtP">From here, you can search for all the movies you want to see, by name, title, genre, actors and directors.</p> 
+                    <p className="txtP">From here, you can search for all the movies you want to see, by {criteria} </p> 
                 </div>
                 <div className="boxSearch">
                     <div className="boxInfo">
-                        {criteria}
+                        
                     </div>
                     <div className="boxIB">
                         <input className="impS" type="text" onChange={(e) => setTexto(e.target.value)} ></input>
                         <button onClick={(e) => buscarMovies(e)}>Search</button>
                     </div>
+                    <br/>
                     <div className="contenedor">
                         {movies.map((movie, index ) => {
                             return (
