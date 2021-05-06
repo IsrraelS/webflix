@@ -1,21 +1,40 @@
-.cntSingleR{
+.movie_title{
+    cursor: pointer;
+    font-weight: bolder;
+}
+.movie_details{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-start;
     justify-content: center;
-    background: #364156;
-    width: 100%;
+}
+.movie_image{
+    cursor: pointer;
+}
+.cntSingleR{
+    display: flex;
+    flex-direction: row;
+    align-items:stretch;
+    justify-content:space-between;
+    width: 34em;
+    @media(max-width:700px){
+        width: 100%;
+
+    }
 
         .boxSR{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            width: 19em;
-            height: 20em;
+            width: 29em;
             background: #506c64;
+            //background: red;
             border-radius: 5px;
-            box-shadow: 5px 5px;
+            @media(max-width:700px){
+                width: 100%;
+
+            }
         }
 
 }

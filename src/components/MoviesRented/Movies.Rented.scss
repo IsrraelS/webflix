@@ -7,15 +7,19 @@
     width: 100%;
 
         .boxRents{
+            margin: 0.4em;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            width: 19em;
-            height: 20em;
             background: #506c64;
             border-radius: 5px;
             box-shadow: 5px 5px;
+
+            @media(max-width:700px){
+                width: 100%;
+
+            }
         }
 
 }

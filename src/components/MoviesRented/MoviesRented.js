@@ -1,9 +1,11 @@
 import './Movies.Rented.scss';
 import React, { useEffect, useState } from 'react';
 import SingleRent from '../SingleRent/SingleRent.js';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ApiConsumer from '../../util/ApiConsumer';
 import './Movies.Rented.scss'
+import { movieAction } from '../../store/actions/movieActions';
+import { useHistory } from 'react-router';
 
 const MoviesRented = () => {
     
@@ -22,6 +24,12 @@ const MoviesRented = () => {
         }
         getUserOrders();
     }, []);
+    const dispatch = useDispatch();    
+    const history = useHistory();
+    const detalles = (movie) => {
+        dispatch(movieAction(movie));
+        history.push('/movieDetail');
+    }
     
     return (
         <div className="cntRents">
@@ -33,7 +41,10 @@ const MoviesRented = () => {
                             <SingleRent
                             key = {index}
                             user = {order.user.name}
-                            movie = {order.movie.title}
+                            ruta = {order.movie.ruta}
+                            title = {order.movie.title}
+                            movie = {order.movie}
+                            funcion={detalles} 
                             startDate = {order.rent_date}
                             endDate = {order.devolution_date}
                         />
@@ -42,7 +53,10 @@ const MoviesRented = () => {
                             <SingleRent
                             key = {index}
                             user = ""
-                            movie = {order.movie.title}
+                            ruta = {order.movie.poster_path}
+                            title = {order.movie.title}
+                            movie = {order.movie}
+                            funcion={detalles} 
                             startDate = {order.rent_date}
                             endDate = {order.devolution_date}
                         />
