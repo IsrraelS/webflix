@@ -38,7 +38,7 @@ const MovieDetail = () => {
 
     return (
         <div className="cntMovieDetail">            
-            <h1>{movie.title}</h1>
+            <br/><br/><br/>
             <div className="boxMD">
                 <div className="headerMD">
                     <div className="cntImgMD" >
@@ -46,6 +46,7 @@ const MovieDetail = () => {
                     </div>
                 </div>
                 <div className="mainMD">
+                <h1>{movie.title}</h1>
                   {!rented && <button onClick={()=>rent(movie, user)}>Rent</button>} 
                   {rented && <span className="alquilado">Alquilado</span>}                  
                     <div className="boxTxtM">  
@@ -82,6 +83,7 @@ const MovieDetail = () => {
                     </div>
                 </div>
             </div>
+            <br/>
         </div>
     )
 };
